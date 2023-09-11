@@ -40,10 +40,7 @@ namespace tgbot
         {
             if (_dic.ContainsKey(eng))
             {
-
-
                 return _dic[eng];
-
             }
             else
             {

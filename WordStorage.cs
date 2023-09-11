@@ -33,8 +33,6 @@ namespace tgbot
                 Console.WriteLine("не удалось прочесть файл");
                 return new Dictionary<string, string>();
             }
-
-
         }
         public void AddWord(string eng, string rus)
         {
@@ -50,7 +48,5 @@ namespace tgbot
                 Console.WriteLine($"не удалось добавить слово {eng} в словарь");
             }
         }
-
     }
-
 }
