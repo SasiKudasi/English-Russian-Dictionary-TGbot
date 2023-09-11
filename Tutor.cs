@@ -26,13 +26,13 @@ namespace tgbot
             {
 
                 _storage.AddWord(eng, rus);
-                _dic.Add(eng, rus);
+                _dic.Add(eng.ToLower(), rus.ToLower());
             }
         }
 
         public bool CheckWord(string eng, string rus)
         {
-            var answer = _dic[eng];
+            var answer = _dic[eng].ToLower();
             return answer == rus;
         }
 
@@ -40,7 +40,7 @@ namespace tgbot
         {
             if (_dic.ContainsKey(eng))
             {
-                return _dic[eng];
+                return _dic[eng].ToLower();
             }
             else
             {

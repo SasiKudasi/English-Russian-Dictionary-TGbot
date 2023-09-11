@@ -60,7 +60,7 @@ namespace tgbot
             }
             else
             {
-                tutor.AdWord(msgArr[1], msgArr[2]);
+                tutor.AdWord(msgArr[1].ToLower(), msgArr[2].ToLower());
                 return "новое слово добавленно в словарь";
             }
         }
@@ -120,11 +120,11 @@ namespace tgbot
 
         private static string CheckWord(string eng, string rus)
         {
-            if (tutor.CheckWord(eng, rus))               
+            if (tutor.CheckWord(eng.ToLower(), rus.ToLower()))               
                 return "Правильно!";                
             else
             {
-                var correctAnswer = tutor.Translate(eng);
+                var correctAnswer = tutor.Translate(eng.ToLower());
                 return $"Неверно! Правильный ответ {correctAnswer}";
             }
         }

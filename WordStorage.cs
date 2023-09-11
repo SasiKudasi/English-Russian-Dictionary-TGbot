@@ -40,7 +40,7 @@ namespace tgbot
             {
                 using (var writer = new StreamWriter(_path, true))
                 {
-                    writer.WriteLine($"{eng}|{rus}");
+                    writer.WriteLine($"{eng.ToLower()}|{rus.ToLower()}");
                 }
             }
             catch (Exception ex)
