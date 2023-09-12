@@ -41,6 +41,7 @@ namespace tgbot
                 using (var writer = new StreamWriter(_path, true))
                 {
                     writer.WriteLine($"{eng.ToLower()}|{rus.ToLower()}");
+                    GetAllWords();
                 }
             }
             catch (Exception ex)
