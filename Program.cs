@@ -16,7 +16,7 @@ namespace tgbot
     {
         static Tutor tutor = new Tutor();
         static WordStorage storage = new WordStorage();
-        static TelegramBotClient Bot = new TelegramBotClient("6462476904:AAElPcodQl2MSSco0ENNI_1IOZVkDZ953QI");
+        static TelegramBotClient Bot = new TelegramBotClient("TGTOKEN");
         static Dictionary<long, string> lastWord = new Dictionary<long, string>();
         const string COMMAND_LIST =
             @"Список команд: 
