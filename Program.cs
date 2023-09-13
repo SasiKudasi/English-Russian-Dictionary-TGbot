@@ -18,7 +18,9 @@ namespace tgbot
        
         static Tutor tutor = new Tutor();
         static WordStorage storage = new WordStorage();
+
         static TelegramBotClient Bot = new TelegramBotClient("TGTOKEN");
+
         static Dictionary<long, string> lastWord = new Dictionary<long, string>();
         
         static  void Main(string[] args)
@@ -51,14 +53,8 @@ namespace tgbot
                  {
                     new KeyboardButton("Старт"),
                     new KeyboardButton("Начать")
-                  },
-                 new[]
-                 {
-                     new KeyboardButton("Добавить"),
+                  }
                  
-                 },
-
-
             };
 
             return new ReplyKeyboardMarkup(keyboard);
@@ -119,7 +115,8 @@ namespace tgbot
                 {
                     case "Старт":
                         text = $"Привет, {firstName}! Что бы начать пользоваться ботом, нажмите кнопуку \"Начать\"," +
-                            $"что бы добавить новое слово, нажмите кнопку \" Добавить\" ";
+                            $"что бы добавить новое слово, напишите\" Добавить \" слово на английском слово на русском, " +
+                            $"например добавить hello привет\"\" ";
                         break;
                     case "Добавить":
                         text = AddWord(msgArgs);
